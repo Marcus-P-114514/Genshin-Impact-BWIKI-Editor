@@ -6,6 +6,10 @@ SetupWiz::SetupWiz(QWidget *parent)
     , ui(new Ui::SetupWiz)
 {
     ui->setupUi(this);
+    setWindowFlags (Qt::FramelessWindowHint);
+    setWindowOpacity(0.7);
+    setAttribute(Qt::WA_TranslucentBackground);
+    this->setStyleSheet("QWidget{background-color: white; border: 0px solid #ccc; border-radius: 30px;}");
 }
 
 SetupWiz::~SetupWiz()
